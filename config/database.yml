@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: api_rails_admin
+  password: 1234
+  host: 127.0.0.1
+  port: 5432
+
+development:
+  <<: *default
+  database: api_rails_pg_development
+
+test:
+  <<: *default
+  database: api_rails_pg_test
+
+production:
+  <<: *default
+  database: api_rails_pg_production

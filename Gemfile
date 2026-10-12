@@ -4,6 +4,8 @@ ruby "3.4.9"
 
 gem "rails", "~> 7.1.6"
 
+gem "json", "2.6.3"
+
 gem "pg", "~> 1.5"
 
 gem "puma", ">= 5.0"

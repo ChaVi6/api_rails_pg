@@ -9,4 +9,5 @@ Rails.application.routes.draw do
       resources :applies
     end
   end
+  match "/*path", to: "application#catch_404", via: :all
 end

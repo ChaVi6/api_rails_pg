@@ -4,10 +4,12 @@ Rails.application.routes.draw do
       resources :jobs
       resources :companies do
         resources :jobs
+        put 'mark_deleted', to: 'companies#mark_deleted'
       end
       resources :geeks
       resources :applies
     end
   end
+
   match "/*path", to: "application#catch_404", via: :all
 end
